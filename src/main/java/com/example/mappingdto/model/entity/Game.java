@@ -21,7 +21,7 @@ public class Game extends BaseEntity {
     private Integer size;
     @Column
     private BigDecimal price;
-    @Column(columnDefinition = "TEXT")
+    @Column
     private String description;
     @Column
     private LocalDate releaseDate;

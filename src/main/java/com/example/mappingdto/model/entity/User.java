@@ -19,6 +19,8 @@ public class User extends BaseEntity {
     private String password;
     @Column(name = "full_name")
     private String fullName;
+    @Column
+    private boolean isAdmin;
     @ManyToMany
     private Set<Game> games;
 
