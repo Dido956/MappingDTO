@@ -1,5 +1,6 @@
 package com.example.mappingdto;
 
+import com.example.mappingdto.model.dto.UserLoginDto;
 import com.example.mappingdto.model.dto.UserRegisterDto;
 import com.example.mappingdto.service.UserService;
 import org.springframework.boot.CommandLineRunner;
@@ -28,6 +29,10 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
                 case "RegisterUser" -> userService
                         .registerUser(
                                 new UserRegisterDto(commands[1],commands[2],commands[3],commands[4]));
+                case "LoginUser" -> userService
+                        .loginUser(new UserLoginDto(commands[1],commands[2]));
+                case "Logout" -> userService
+                        .logoutUser();
             }
         }
     }
