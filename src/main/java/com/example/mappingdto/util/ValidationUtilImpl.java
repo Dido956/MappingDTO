@@ -24,7 +24,7 @@ public class ValidationUtilImpl implements ValidationUtil {
     }
 
     @Override
-    public <E> Set<ConstraintViolation<E>> violation(E entity) {
+    public <E> Set<ConstraintViolation<E>> getViolations(E entity) {
         return validator.validate(entity);
     }
 }

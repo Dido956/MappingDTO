@@ -2,6 +2,7 @@ package com.example.mappingdto.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.transaction.Transactional;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,9 +17,9 @@ public class Game extends BaseEntity {
     @Column
     private String trailer;
     @Column
-    private String image;
+    private String imageThumbnail;
     @Column
-    private Integer size;
+    private Double size;
     @Column
     private BigDecimal price;
     @Column

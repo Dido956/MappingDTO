@@ -6,6 +6,8 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import java.util.Set;
 
@@ -22,6 +24,7 @@ public class User extends BaseEntity {
     @Column
     private boolean isAdmin;
     @ManyToMany
+    @Fetch(FetchMode.JOIN)
     private Set<Game> games;
 
     //problem?

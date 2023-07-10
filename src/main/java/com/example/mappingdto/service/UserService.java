@@ -10,4 +10,10 @@ public interface UserService{
     void loginUser(UserLoginDto userLoginDto);
 
     void logoutUser();
+
+    void getAllGamesByLoggedInUser();
+
+    void addItemToCart(String gameName);
+
+    void removeItemFromCart(String gameName);
 }
